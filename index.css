@@ -1,10 +1,18 @@
 @font-face {
-  src: url("");
-  font-family: "";
+  src: url("./fonts/KumbhSans-ExtraLight.ttf");
+  font-family: "Kumbh";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("./fonts/KumbhSans-SemiBold.ttf");
+  font-family: "KumbhBold";
+  font-display: swap;
 }
 
 * {
   box-sizing: border-box;
+  font-family: "Kumbh";
 }
 
 body {
@@ -18,8 +26,31 @@ body {
 }
 
 main {
-  width: calc(15em + 15vw);
   background-color: white;
+  overflow: hidden;
+
+  width: calc(12em + 12vw);
+  border-radius: calc(0.3em + 0.3vw);
+
+  z-index: 2;
+}
+
+h1,
+h2 {
+  font-family: "KumbhBold";
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1 {
+  margin-right: calc(0.3em + 0.3vw);
+}
+hr {
+  opacity: 0.2;
+}
+
+p {
+  margin: 0;
 }
 
 .container {
@@ -36,6 +67,8 @@ main {
   min-height: 150vh;
 
   position: absolute;
+
+  z-index: 1;
 }
 
 .bg-top {
@@ -49,11 +82,53 @@ main {
 }
 
 .bg-bottom {
-  margin-top: 20em;
-  margin-left: 40em;
+  margin-top: calc(10em + 10vw);
+  margin-left: calc(20em + 20vw);
 
   background-image: url("./images/bg-pattern-bottom.svg");
 
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.card-image {
+  width: 100%;
+  height: calc(4em + 4vw);
+
+  background-image: url("./images/bg-pattern-card.svg");
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.avatar-image {
+  width: calc(3.2em + 3.2vw);
+  height: calc(3.2em + 3.2vw);
+  margin-top: -3em;
+  margin-left: calc(4.4em + 4.4vw);
+  margin-right: calc(4.4em + 4.4vw);
+
+  border-radius: 200%;
+
+  background-image: url("./images/image-victor.jpg");
+  background-size: cover;
+
+  outline: calc(0.2em + 0.2vw) solid white;
+}
+
+.tittle {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
