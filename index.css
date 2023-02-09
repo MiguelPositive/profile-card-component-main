@@ -1,0 +1,59 @@
+@font-face {
+  src: url("");
+  font-family: "";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background-color: #19a1ad;
+}
+
+main {
+  width: calc(15em + 15vw);
+  background-color: white;
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  min-width: 150vw;
+  min-height: 150vh;
+
+  position: absolute;
+}
+
+.bg-top {
+  margin-top: -30em;
+  margin-left: -20em;
+
+  background-image: url("./images/bg-pattern-top.svg");
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bg-bottom {
+  margin-top: 20em;
+  margin-left: 40em;
+
+  background-image: url("./images/bg-pattern-bottom.svg");
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
